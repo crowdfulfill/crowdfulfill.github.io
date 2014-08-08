@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1 user-scalable=no">
+  <title>Contact CrowdFulfill to learn more about order fulfillment.</title>
+  <meta name="description" content="Get more detailed information by emailing us or calling us at 702-997-6980.">
+  <meta name="author" content="CrowdFulfill">
+
+	<!-- CSS - "css/foundation.css" is default -->
+	<link rel="stylesheet" href="css/foundation.css">
+
+	<!-- Modernizr 2.6.2 -->
+	<script src="js/modernizr.custom.js"></script>
+
+	<!-- Latest jQuery -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  
+	<!-- Google font -->
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
+	<!-- FONT AWESOME icons -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<!-- Responsive nav -->
+	<script>
+		// Create the dropdown base
+		$("<select />").appendTo("nav");
+
+		// Create default option "Go to..."
+		$("<option />", {
+		   "selected": "selected",
+		   "value"   : "",
+		   "text"    : "Go to..."
+		}).appendTo("nav select");
+
+		// Populate dropdown with menu items
+		$("nav a").each(function() {
+		 var el = $(this);
+		 $("<option />", {
+			 "value"   : el.attr("href"),
+			 "text"    : el.text()
+		 }).appendTo("nav select");
+		});
+    </script>
+
+<!-- SUPERFISH NAVIGATION  -->
+		<link rel="stylesheet" href="js/superfish-nav/dist/css/superfish.css" media="screen">
+		<style> </style>
+		<script src="js/superfish-nav/dist/js/hoverIntent.js"></script>
+		<script src="js/superfish-nav/dist/js/superfish.js"></script>
+		<script>
+
+		(function($){ //create closure so we can safely use $ as alias for jQuery
+
+			$(document).ready(function(){
+
+				// initialise plugin
+				var example = $('#example').superfish({
+					//add options here if required
+				});
+
+				// buttons to demonstrate Superfish's public methods
+				$('.destroy').on('click', function(){
+					example.superfish('destroy');
+				});
+
+				$('.init').on('click', function(){
+					example.superfish();
+				});
+
+				$('.open').on('click', function(){
+					example.children('li:first').superfish('show');
+				});
+
+				$('.close').on('click', function(){
+					example.children('li:first').superfish('hide');
+				});
+			});
+
+		})(jQuery);
+
+
+		</script>
+
+<!-- Google Maps -->
+  <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"></script>
+  <script>
+	function initialize()
+	{
+	var mapProp = {
+    center: new google.maps.LatLng(37.037692,-113.561355),
+    zoom:7,
+    panControl:false,
+    zoomControl:true,
+    zoomControlOptions: {
+      style:google.maps.ZoomControlStyle.SMALL
+    },
+    mapTypeControl:false,
+	mapTypeControlOptions: {
+      style:google.maps.MapTypeControlStyle.DROPDOWN_MENU},
+    scaleControl:true,
+    streetViewControl:false,
+    overviewMapControl:false,
+    rotateControl:false,
+    zoomControl: true,
+	scaleControl: false,
+	scrollwheel: false,	
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+	
+    var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+	}
+
+	google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+</head>
+
+
+<body>
+	<!-- NAVIBAR -->
+	<div class="top_nav">
+		<div class="row">
+			<div class="large-4 columns logo"><img src="img/Crowd-Fulfill-Logo-Sm.png" /></div>
+			<div class="large-8 columns">
+				<nav>
+					<!-- Navigation -->
+					<ul class="sf-menu" id="example">
+						<li class="current"><a href="index.html">Home</a></li>
+						<li><a href="how-fulfillment-works.html">How it Works</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						<li><a href="blog.html">Blog</a></li>
+					</ul><!-- end of Navigation -->
+					<!-- Navigation on Mobile Devices -->
+					<select> 
+						<option value="#" selected="selected">Menu</option> 
+						<option value="index.html">Home</option>
+						<option value="how-fulfillment-works.html">How it Works</option> 
+						<option value="contact.html">Contact</option>
+						<option value="blog.html">Blog</option>
+					</select>
+					<!-- end of Navigation on Mobile Devices -->
+				</nav>
+			</div>
+		</div>
+	</div>
+	<!-- end of NAVIBAR -->
+
+	<!-- Google Maps -->
+	<div id="googleMap" style="wdith: 100%; height: 360px"></div>
+	<!-- Google Maps  -->
+
+	<!-- ABOUT -->
+	<div class="arcus-content">
+		<div class="row">
+			<div class="large-8 columns responsive_space">
+				<div class="medium-h to-left">
+					<h3>Who is CrowdFulfill?</h3>
+					<p>
+						We&rsquo;re a division of Redrock Fulfillment that is dedicated solely to servicing crowdfunded companies.  Whether you&rsquo;re shipping shirts or tech items, let us put our twenty years of shipping experience to work for you.  Getting started with us is an easy four step process &mdash; and not only can we help with shipping &mdash; but packaging and websites as well.  Let us know how we can help you succeed by contacting us today at (702) 997-6980.
+					</p>
+					<br><br>
+					<div class="medium-h to-left">
+						<h3>Why choose us?</h3>
+						<ul>
+							<li class="li-2">You&rsquo;ll gain twenty years of shipping and inventory management experience</li>
+							<li class="li-2">You&rsquo;re welcome to use your own shipping accounts</li>
+							<li class="li-2">We have no monthly minimum order volume</li>
+							<li class="li-2">We have an open API</li>
+							<li class="li-2">We accept CSV files, BackerKit files, and Celery files</li>
+							<li class="li-2">Check on order statuses and inventory 24/7 with our customer portal</li>
+							<li class="li-2">Receive a Low Stock Report daily at 10:00 p.m. Mountain time</li>
+							<li class="li-2">You get a single point of contact for all account changes and questions</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="large-4 columns">
+					<div class="medium-h">
+						<h3>Contact us</h3>
+						<h5 class="subheader">We want to speak with you!</h5>
+					</div>
+				<!-- BEGIN Podio web form -->
+				<script src="https://podio.com/webforms/8994896/664466.js"></script>
+				<script type="text/javascript">
+				  _podioWebForm.render("664466")
+				</script>
+				<div class="podio-webform-container">
+					Form powered by <a href="https://company.podio.com/collaboration-software" class="podio-webform-inner">Podio</a> a CITRIX company.
+				</div>
+				<!-- END Podio web form -->
+			</div>
+		</div>
+	</div>
+	<!-- end of ABOUT -->
+
+
+	<!-- Footer_big -->
+	<div class="footer_big arcus-content">
+		<div class="row">
+			<div class="large-3 columns responsive_space">
+				<h3>Get in Touch</h3>
+				<div class="decorative-line"></div>
+				<p>
+					CrowdFulfill<br />
+					1076 E Commerce Dr, Ste 200<br />
+					Saint George, UT 84790<br />
+					(702) 997-6980<br />
+					Monday - Friday<br />
+					9 am - 4 pm Mountain time
+				</p>
+			</div>
+
+			<div class="large-3 columns responsive_space">
+				<h3>Partners</h3>
+				<div class="decorative-line"></div>
+				<ul>
+					<li><a href="http://www.3plcentral.com" target="_blank">3PL Central</a></li>
+					<li><a href="http://www.ultracart.com/features/" target="_blank">UltraCart</a></li>
+					<li><a href="http://www.orderdesk.me/integrations/" target="_blank">OrderDesk.me</a></li>
+				</ul>
+			</div>
+
+			<div class="large-3 columns responsive_space">
+				<h3>Newsletter</h3>
+				<div class="decorative-line"></div>
+				<p>Get service alerts and updates delivered straight to your inbox.</p>
+				<a class="button footer-button" href="http://eepurl.com/YAsjj" target="_blank">Sign Up</a>
+			</div>
+
+			<div class="large-3 columns responsive_space">
+				<h3>Moment of Zen</h3>
+				<div class="decorative-line"></div>
+				<img src="img/Moment-of-Zen.png"></img>
+			</div>
+		</div>
+	</div>
+	<!-- end of Footer_big -->
+
+	<!-- Footer_small -->
+	<div class="footer_small">
+		<div class="row">
+			<div class="footer_small_copyright copyright_mobile">
+				<div class="large-6 columns">
+					<p>&#169; 2014 CrowdFulfill, a division of Redrock Fulfillment.</p>
+				</div>
+			</div>
+			<div class="footer_small_social to-right">
+				<div class="large-6 columns">
+					<a target="_blank" href="https://facebook.com/CrowdFulfill"><i class="fa fa-facebook"></i></a>
+					<a target="_blank" href="http://twitter.com/crowdfulfill"><i class="fa fa-twitter"></i></a>
+					<a target="_blank" href="https://plus.google.com/u/0/b/106625895848547729480/106625895848547729480/about"><i class="fa fa-google-plus"></i></a>
+					<a target="_blank" href="#"><i class="fa fa-youtube-play"></i></a>
+					<a href="skype:CrowdFulfill?call"><i class="fa fa-skype"></i></a>   
+					<a target="_blank" href="http://www.linkedin.com/company/crowdfulfill/"><i class="fa fa-linkedin"></i></a>
+					<a target="_blank" href="https://www.dropbox.com/sh/0ch4fohrzc0vwvz/AADdTdau0N6og3cjPUA-adnNa"><i class="fa fa-dropbox"></i></a>
+				</div>
+			</div>
+		</div>
+	</div><!-- end of Footer_small -->
+		
+
+  <script>
+  document.write('<script src=' +
+  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+  '.js><\/script>')
+  </script>
+  
+  <script src="js/foundation.min.js"></script>
+  <!--
+  
+  <script src="js/foundation/foundation.js"></script>
+  
+  <script src="js/foundation/foundation.alerts.js"></script>
+  
+  <script src="js/foundation/foundation.clearing.js"></script>
+  
+  <script src="js/foundation/foundation.cookie.js"></script>
+  
+  <script src="js/foundation/foundation.dropdown.js"></script>
+  
+  <script src="js/foundation/foundation.forms.js"></script>
+  
+  <script src="js/foundation/foundation.joyride.js"></script>
+  
+  <script src="js/foundation/foundation.magellan.js"></script>
+  
+  <script src="js/foundation/foundation.orbit.js"></script>
+  
+  <script src="js/foundation/foundation.reveal.js"></script>
+  
+  <script src="js/foundation/foundation.section.js"></script>
+  
+  <script src="js/foundation/foundation.tooltips.js"></script>
+  
+  <script src="js/foundation/foundation.topbar.js"></script>
+  
+  <script src="js/foundation/foundation.interchange.js"></script>
+  
+  <script src="js/foundation/foundation.placeholder.js"></script>
+  
+  <script src="js/foundation/foundation.abide.js"></script>
+  
+  -->
+  
+  <script>
+    $(document).foundation();
+  </script>
+  
+  <!-- Responsive nav -->
+    <script>
+  $("nav select").change(function() {
+  window.location = $(this).find("option:selected").val();
+  });
+  </script>
+  <!-- end of Responsive nav -->
+</body>
+</html>

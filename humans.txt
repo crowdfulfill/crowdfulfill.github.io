@@ -1,0 +1,13 @@
+/* FRAMEWORK */
+Foundation was made by ZURB, an interaction design and design strategy firm in Campbell, CA
+zurb.com
+humanstxt.org
+
+/* SITE */
+Standards: HTML5, CSS3
+Components: jQuery, Superfish, Modernizr, Font Awesome, 
+Software: Illustrator CS5.5, Sublime Text 2, Git,
+
+/* Icons */
+We used icons from two places.  Some icons were made by Freepik.com.  Some where made buysellgraphic.com.  You should visit them.
+
