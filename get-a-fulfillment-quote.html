@@ -30,6 +30,28 @@
 		<!-- FONT AWESOME icons -->
 		<link rel="stylesheet" href="css/font-awesome.min.css">
 
+		<!-- Responsive nav -->
+		<script>
+			// Create the dropdown base
+			$("<select />").appendTo("nav");
+
+			// Create default option "Go to..."
+			$("<option />", {
+			   "selected": "selected",
+			   "value"   : "",
+			   "text"    : "Go to..."
+			}).appendTo("nav select");
+
+			// Populate dropdown with menu items
+			$("nav a").each(function() {
+			 var el = $(this);
+			 $("<option />", {
+				 "value"   : el.attr("href"),
+				 "text"    : el.text()
+			 }).appendTo("nav select");
+			});
+		</script>
+
 		<!-- SUPERFISH NAVIGATION  -->
 		<link rel="stylesheet" href="js/superfish-nav/dist/css/superfish.css" media="screen">
 		<style> </style>
@@ -66,129 +88,131 @@
 			})(jQuery);
 		</script>
 	</head>
+
 	<body>
-	<!-- NAVIBAR -->
-	<div class="top_nav">
-		<div class="row">
-			<div class="large-4 columns logo"><img src="img/Crowd-Fulfill-Logo-Sm.png" /></div>
-			<div class="large-8 columns">
-				<nav>
-					<!-- Navigation -->
-					<ul class="sf-menu" id="example">
-						<li class="current"><a href="index.html">Home</a></li>
-						<li><a href="how-fulfillment-works.html">How it Works</a></li>
-						<li><a href="contact.html">Contact</a></li>
-						<li><a href="blog.html">Blog</a></li>
-					</ul><!-- end of Navigation -->
-					<!-- Navigation on Mobile Devices -->
-					<select> 
-						<option value="#" selected="selected">Menu</option> 
-						<option value="index.html">Home</option>
-						<option value="how-fulfillment-works.html">How it Works</option> 
-						<option value="contact.html">Contact</option>
-						<option value="blog.html">Blog</option>
-					</select>
-					<!-- end of Navigation on Mobile Devices -->
-				</nav>
-			</div>
-		</div>
-	</div>
-	<!-- end of NAVIBAR -->
-
-	<!-- Blog Title -->
-	<div class="row arcus-content">
-		<div class="large-12 columns big-h no-padding to-center">
-			<h1>Get a Fulfillment Quote</h1>
-			<h5 class="subheader">It&rsquo;s fast, easy, and free.</h5>
-		</div>
-	</div>
-	<!-- end of Blog Title -->
-
-
-	<!-- Content -->
-	<div class="row arcus-content">
-<!-- BEGIN Podio web form -->
-<script src="https://podio.com/webforms/5740108/449361.js"></script>
-<script type="text/javascript">
-  _podioWebForm.render("449361")
-</script>
-  <div class="podio-webform-container">
-  A webform by <a href="https://company.podio.com/collaboration-software" class="podio-webform-inner">Podio</a> a CITRIX company. 
-  </div>
-<!-- END Podio web form -->
-	</div>
-
-	<!-- Footer_big -->
-	<div class="footer_big arcus-content">
-		<div class="row">
-			<div class="large-3 columns responsive_space">
-			<h3>Get in Touch</h3>
-			<div class="decorative-line"></div>
-				<p>
-					CrowdFulfill<br />
-					1076 E Commerce Dr, Ste 200<br />
-					Saint George, UT 84790<br />
-					(702) 997-6980<br />
-					Monday - Friday<br />
-					9 am - 4 pm Mountain time
-				</p>
-			</div>
-
-			<div class="large-3 columns responsive_space">
-			<h3>Partners</h3>
-			<div class="decorative-line"></div>
-				<ul>
-				  <li><a href="http://www.3plcentral.com" target="_blank">3PL Central</a></li>
-				  <li><a href="http://www.ultracart.com/features/" target="_blank">UltraCart</a></li>
-				  <li><a href="http://www.orderdesk.me/integrations/" target="_blank">OrderDesk.me</a></li>
-				</ul>
-			</div>
-
-			<div class="large-3 columns responsive_space">
-				<h3>Newsletter</h3>
-				<div class="decorative-line"></div>
-				<p>Get service alerts and updates delivered straight to your inbox.</p>
-				<a class="button footer-button" href="http://eepurl.com/YAsjj" target="_blank">Sign Up</a>
-			</div>
-
-			<div class="large-3 columns responsive_space">
-				<h3>Moment of Zen</h3>
-				<div class="decorative-line"></div>
-				<img src="img/Moment-of-Zen.png"></img>
-			</div>
-		</div>
-	</div>
-	<!-- end of Footer_big -->
-	<!-- Footer_small -->
-	<div class="footer_small">
-		<div class="row">
-			<div class="footer_small_copyright copyright_mobile">
-				<div class="large-6 columns">
-				<p>&#169; 2014 CrowdFulfill, a division of Redrock Fulfillment.</p>
-				</div>
-			</div>
-			<div class="footer_small_social to-right">
-				<div class="large-6 columns">
-					<a target="_blank" href="https://facebook.com/CrowdFulfill"><i class="fa fa-facebook"></i></a>
-					<a target="_blank" href="http://twitter.com/crowdfulfill"><i class="fa fa-twitter"></i></a>
-					<a target="_blank" href="https://plus.google.com/u/0/b/106625895848547729480/106625895848547729480/about"><i class="fa fa-google-plus"></i></a>
-					<a target="_blank" href="#"><i class="fa fa-youtube-play"></i></a>
-					<a href="skype:CrowdFulfill?call"><i class="fa fa-skype"></i></a>   
-					<a target="_blank" href="http://www.linkedin.com/company/crowdfulfill/"><i class="fa fa-linkedin"></i></a>
-					<a target="_blank" href="https://www.dropbox.com/sh/0ch4fohrzc0vwvz/AADdTdau0N6og3cjPUA-adnNa"><i class="fa fa-dropbox"></i></a>
+		<!-- NAVIBAR -->
+		<div class="top_nav">
+			<div class="row">
+				<div class="large-4 columns logo"><img src="img/CrowdFulfill-Logo-Sm.svg" /></div>
+				<div class="large-8 columns">
+					<nav>
+						<!-- Navigation -->
+						<ul class="sf-menu" id="example">
+							<li class="current"><a href="index.html">Home</a></li>
+							<li><a href="how-fulfillment-works.html">How it Works</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							<li><a href="blog.html">Blog</a></li>
+							<li><a href="get-a-fulfillment-quote.html">Get a Quote</a></li>
+						</ul><!-- end of Navigation -->
+						<!-- Navigation on Mobile Devices -->
+						<select> 
+							<option value="#" selected="selected">Menu</option> 
+							<option value="index.html">Home</option>
+							<option value="how-fulfillment-works.html">How it Works</option> 
+							<option value="contact.html">Contact</option>
+							<option value="blog.html">Blog</option>
+							<option value="get-a-fulfillment-quote.html">Get a Quote</option>
+						</select>
+						<!-- end of Navigation on Mobile Devices -->
+					</nav>
 				</div>
 			</div>
 		</div>
-	</div><!-- end of Footer_small -->
-			
+		<!-- end of NAVIBAR -->
 
-	  <script>
-	  document.write('<script src=' +
-	  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
-	  '.js><\/script>')
-	  </script>
-	  
-	  <script src="js/foundation.min.js"></script>
+		<!-- Blog Title -->
+		<div class="row arcus-content">
+			<div class="large-12 columns big-h no-padding to-center">
+				<h1>Get a Fulfillment Quote</h1>
+				<h5 class="subheader">It&rsquo;s fast, easy, and free.</h5>
+			</div>
+		</div>
+		<!-- end of Blog Title -->
+
+		<!-- Content -->
+		<div class="row arcus-content">
+			<!-- BEGIN Podio web form -->
+			<script src="https://podio.com/webforms/5740108/449361.js"></script>
+			<script type="text/javascript">
+				_podioWebForm.render("449361")
+			</script>
+			<div class="podio-webform-container">
+				Form powered by <a href="https://company.podio.com/collaboration-software" class="podio-webform-inner">Podio</a>, a CITRIX company. 
+			</div>
+			<!-- END Podio web form -->
+		</div>
+
+		<!-- Footer_big -->
+		<div class="footer_big arcus-content">
+			<div class="row">
+				<div class="large-3 columns responsive_space">
+				<h3>Get in Touch</h3>
+				<div class="decorative-line"></div>
+					<p>
+						CrowdFulfill<br />
+						1076 E Commerce Dr, Ste 200<br />
+						Saint George, UT 84790<br />
+						(702) 997-6980<br />
+						Monday - Friday<br />
+						9 am - 4 pm Mountain time
+					</p>
+				</div>
+
+				<div class="large-3 columns responsive_space">
+				<h3>Partners</h3>
+				<div class="decorative-line"></div>
+					<ul>
+					  <li><a href="http://www.3plcentral.com" target="_blank">3PL Central</a></li>
+					  <li><a href="http://www.ultracart.com/features/" target="_blank">UltraCart</a></li>
+					  <li><a href="http://www.orderdesk.me/integrations/" target="_blank">OrderDesk.me</a></li>
+					</ul>
+				</div>
+
+				<div class="large-3 columns responsive_space">
+					<h3>Newsletter</h3>
+					<div class="decorative-line"></div>
+					<p>Get service alerts and updates delivered straight to your inbox.</p>
+					<a class="button footer-button" href="http://eepurl.com/YAsjj" target="_blank">Sign Up</a>
+				</div>
+
+				<div class="large-3 columns responsive_space">
+					<h3>Moment of Zen</h3>
+					<div class="decorative-line"></div>
+					<img src="img/Moment-of-Zen.png"></img>
+				</div>
+			</div>
+		</div>
+		<!-- end of Footer_big -->
+
+		<!-- Footer_small -->
+		<div class="footer_small">
+			<div class="row">
+				<div class="footer_small_copyright copyright_mobile">
+					<div class="large-6 columns">
+					<p>&#169; 2014 CrowdFulfill, a division of Redrock Fulfillment.</p>
+					</div>
+				</div>
+				<div class="footer_small_social to-right">
+					<div class="large-6 columns">
+						<a target="_blank" href="https://facebook.com/CrowdFulfill"><i class="fa fa-facebook"></i></a>
+						<a target="_blank" href="http://twitter.com/crowdfulfill"><i class="fa fa-twitter"></i></a>
+						<a target="_blank" href="https://plus.google.com/u/0/b/106625895848547729480/106625895848547729480/about"><i class="fa fa-google-plus"></i></a>
+						<a target="_blank" href="#"><i class="fa fa-youtube-play"></i></a>
+						<a href="skype:CrowdFulfill?call"><i class="fa fa-skype"></i></a>   
+						<a target="_blank" href="http://www.linkedin.com/company/crowdfulfill/"><i class="fa fa-linkedin"></i></a>
+						<a target="_blank" href="https://www.dropbox.com/sh/0ch4fohrzc0vwvz/AADdTdau0N6og3cjPUA-adnNa"><i class="fa fa-dropbox"></i></a>
+					</div>
+				</div>
+			</div>
+		</div><!-- end of Footer_small -->
+				
+		<script>
+		document.write('<script src=' +
+		('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+		'.js><\/script>')
+		</script>
+
+		<script src="js/foundation.min.js"></script>
   <!--
   
   <script src="js/foundation/foundation.js"></script>
@@ -224,5 +248,17 @@
   <script src="js/foundation/foundation.abide.js"></script>
   
   -->
+
+		<script>
+			$(document).foundation();
+		</script>
+
+
+		<!-- Responsive nav -->
+		<script>
+			$("nav select").change(function() {
+				window.location = $(this).find("option:selected").val();
+			});
+		</script>
 	</body>
 </html>
